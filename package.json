@@ -1,0 +1,36 @@
+{
+  "name": "redux-delux",
+  "version": "0.1.0",
+  "description": "Manage RESTful API transactions without the boilerplate",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "compile": "npx babel-cli src -d lib",
+    "prepublish": "npm run compile"
+  },
+  "peerDependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.15.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "jest": "^22.4.3",
+    "sinon": "^5.0.7",
+    "axios": "^0.18.0",
+    "react": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.7.0",
+    "regenerator-runtime": "^0.11.1"
+  }
+}
