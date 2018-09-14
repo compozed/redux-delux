@@ -1,5 +1,5 @@
 {
-  "name": "redux-delux",
+  "name": "@compozed/redux-delux",
   "version": "0.1.0",
   "description": "Manage RESTful API transactions without the boilerplate",
   "main": "lib/index.js",
