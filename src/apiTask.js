@@ -1,6 +1,6 @@
 import {v1 as uuid} from 'uuid';
 
-const apiTask = (taskBuilder) => {
+const apiTask = (taskBuilder, optionalGetDataReturn) => {
 
     const type = '_rr_API_TASK';
 
@@ -18,7 +18,12 @@ const apiTask = (taskBuilder) => {
                             const res = await task(data);
                             data.push(res);
                         }
-                        dispatch({type, id, state: 'SUCCESS'})
+                        if(optionalGetDataReturn) {
+                            // only return the data if the user passed a function to determine what data to return
+                            dispatch({type, id, state: 'SUCCESS', data: optionalGetDataReturn(data)})
+                        } else {
+                            dispatch({type, id, state: 'SUCCESS'})
+                        }
                     } catch (error){
                         dispatch({type, id, state: 'ERROR', error: error.toString()})
                     }

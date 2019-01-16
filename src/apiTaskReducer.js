@@ -6,7 +6,7 @@ const apiTaskReducer = (state = {}, action) => {
         case 'LOADING':
             return {...state, [action.id]: {isInitialized: true, isLoading: true, error: '', success: false}};
         case 'SUCCESS':
-            return {...state, [action.id]: {isInitialized: true, isLoading: false, error: '', success: true}};
+            return {...state, [action.id]: {isInitialized: true, isLoading: false, error: '', success: true, data: action.data}};
         case 'ERROR':
             return {...state, [action.id]: {isInitialized: true, isLoading: false, error: action.error, success: false}};
         default:

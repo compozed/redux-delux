@@ -19,15 +19,15 @@ describe('API Task Reducer', () => {
     it('should return state correctly for LOADING action state', ()=>{
         let action = {type: '_rr_API_TASK', state: 'LOADING', id:'test'};
         let state = {};
-        const expected = {[action.id]: {isInitialized: true, isLoading: true, error: '', success: false}}
+        const expected = {[action.id]: {isInitialized: true, isLoading: true, error: '', success: false}};
 
         expect(apiTaskReducer(state, action)).toEqual(expected);
     });
 
     it('should return state correctly for SUCCESS action state', ()=>{
-        let action = {type: '_rr_API_TASK', state: 'SUCCESS', id:'test'};
+        let action = {type: '_rr_API_TASK', state: 'SUCCESS', id:'test', data: 'test-data'};
         let state = {};
-        const expected = {[action.id]: {isInitialized: true, isLoading: false, error: '', success: true}}
+        const expected = {[action.id]: {isInitialized: true, isLoading: false, error: '', success: true, data: 'test-data'}};
 
         expect(apiTaskReducer(state, action)).toEqual(expected);
     });
@@ -35,7 +35,7 @@ describe('API Task Reducer', () => {
     it('should return state correctly for ERROR action state', ()=>{
         let action = {type: '_rr_API_TASK', state: 'ERROR', id:'test', error: 'test error message'};
         let state = {};
-        const expected = {[action.id]: {isInitialized: true, isLoading: false, error: action.error, success: false}}
+        const expected = {[action.id]: {isInitialized: true, isLoading: false, error: action.error, success: false}};
 
         expect(apiTaskReducer(state, action)).toEqual(expected);
     });

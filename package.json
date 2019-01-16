@@ -1,6 +1,6 @@
 {
   "name": "@compozed/redux-delux",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Manage RESTful API transactions without the boilerplate",
   "main": "lib/index.js",
   "license": "MIT",
