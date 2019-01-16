@@ -123,6 +123,8 @@ Each sub-task receives an array containing the results of all previous sub-tasks
 
 ```
 
+As of version `0.2.0`, it is possible to pass an optional second argument to `rr.apiTask` in order to enable storing the reponse data. The second argument should be a function which takes an array and returns the data you want to store as associated with that task. The array contains the results of each sub-task. 
+
 ### redux-delux within React components
 
 #### connect
